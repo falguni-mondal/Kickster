@@ -7,6 +7,7 @@ import { setFilteredProducts } from "../../../store/features/filterSlice";
 import { priceStringToInt } from "../../universal/priceCorrection";
 
 const Filters = ({filter, reveal}) => {
+  const products = useSelector((state) => state.products.data);
   const dispatch = useDispatch();
   const [filterData, setFilterData] = useState({
     gender: [],
@@ -16,7 +17,6 @@ const Filters = ({filter, reveal}) => {
     sport: [],
     sneaker: false
   })
-  const products = useSelector((state) => state.products.data);
   const [isFiltered, setIsFiltered] = useState(false);
 
   const [expand, setExpand] = useState({
@@ -231,18 +231,30 @@ const Filters = ({filter, reveal}) => {
     }
   }, []);
 
+  //! FILTER THROUGH NAV
   useEffect(() => {
+    const navFilters = {
+      gender: [],
+      size: [],
+      price: [],
+      brand: [],
+      sport: [],
+      sneaker: false
+    }
     if(filter === "none"){
       ""
     }
     else if(filter === "sneaker"){
-      setFilterData(prev => ({...prev, sneaker: true}));
+      setFilterData({...navFilters, sneaker: true});
     }
     else if (filter === "men" || filter === "women"){
-      setFilterData(prev => ({...prev, gender: [...prev.gender, filter]}));
+      setFilterData({...navFilters, gender: [filter]});
+    }
+    else if (filter === "running" || filter === "lifestyle" || filter === "basketball" || filter === "football" || filter === "training & gym"){
+      setFilterData({...navFilters, sport: [filter]});
     }
     else{
-      setFilterData(prev => ({...prev, sport: [...prev.sport, filter]}));
+      setFilterData({...navFilters, brand: [filter]});
     }
   }, [])
 

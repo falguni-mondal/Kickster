@@ -21,7 +21,7 @@ const Brands = () => {
       col: "lg:col-span-4 col-span-8",
       row: "row-span-2",
       height: "lg:h-full h-[100px]",
-      path: "shop/brands/puma"
+      path: "/shop/puma"
     },
     {
       label: 'nike',
@@ -30,7 +30,7 @@ const Brands = () => {
       col: "lg:col-span-2 col-span-4",
       row: "lg:row-span-4 row-span-2",
       height: "lg:h-full h-[200px]",
-      path: "shop/brands/nike"
+      path: "/shop/nike"
     },
     {
       label: 'adidas',
@@ -39,7 +39,7 @@ const Brands = () => {
       col: "lg:col-span-2 col-span-4",
       row: "lg:row-span-4 row-span-2",
       height: "lg:h-full h-[180px]",
-      path: "shop/brands/adidas"
+      path: "/shop/adidas"
     },
     {
       label: 'reebok',
@@ -48,7 +48,7 @@ const Brands = () => {
       col: "lg:col-span-2 col-span-4",
       row: "lg:row-span-2 row-span-4",
       height: "lg:h-full h-[100px]",
-      path: "shop/brands/reebok"
+      path: "/shop/reebok"
     },
     {
       label: 'fila',
@@ -57,7 +57,7 @@ const Brands = () => {
       col: "lg:col-span-2 col-span-4",
       row: "row-span-2",
       height: "lg:h-full h-[110px]",
-      path: "shop/brands/fila"
+      path: "/shop/fila"
     },
     {
       label: 'calvin klein',
@@ -66,7 +66,7 @@ const Brands = () => {
       col: "col-span-4",
       row: "row-span-2",
       height: "lg:h-full h-[100px]",
-      path: "shop/brands/ck"
+      path: "/shop/ck"
     }
   ]
 

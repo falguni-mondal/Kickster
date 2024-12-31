@@ -44,7 +44,7 @@ const Footer = () => {
           <p className='w-[28ch] text-[0.9rem]'>Discover branded footwear to kickstart your wardrobe, one step at a time —</p>
           <div className="footer-heading creator-dets flex flex-col">
             <div className="creator-links text-zinc-500 lg:text-zinc-700 flex items-center gap-5 lg:gap-3 mt-1 text-[1rem] lg:text-[1.125rem]">
-              <Link>My Portfolio</Link>
+              <Link to="https://falguni.netlify.app" target='_blank'>My Portfolio</Link>
               <span>|</span>
               {
                 creator.map(({ name, icon: Icon, path }) => (

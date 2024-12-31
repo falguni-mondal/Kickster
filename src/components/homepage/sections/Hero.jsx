@@ -50,10 +50,10 @@ const Hero = () => {
                 </div>
                 <img className='shoeImg absolute bottom-[9vh] xl:bottom-[3vh] left-[50%] -translate-x-[50%] h-[30vh] xl:h-[95vh] max-h-[750px] z-10' src={shoe} alt="Nike Shoe Img" />
             </div> */}
-            <div className="w-full h-fit xl:h-[calc(100vh-90px)] flex flex-col xl:flex-row gap-3 xl:gap-5">
-                <div className="left-hero hero-gradient w-full xl:w-[73%] h-[500px] md:h-[700px] xl:h-full flex justify-center items-center overflow-hidden rounded-xl relative">
-                    <h1 className='heading-txt text-[7.5rem] md:text-[28vw] lg:text-[20vw] xl:text-[13vw] 2xl:text-[13.5vw] text-center text-white tracking-tight leading-none w-[4.1ch] xl:w-fit break-words font-semibold relative z-[1]'>KICKSTER</h1>
-                    <h1 className='upper-hero-txt text-[7.5rem] md:text-[28vw] lg:text-[20vw] xl:text-[13vw] 2xl:text-[13.5vw] text-center tracking-tight leading-none w-[4.1ch] xl:w-fit break-words font-semibold'>KICKSTER</h1>
+            <div className="w-full h-fit xl:h-[calc(100vh-90px)] flex flex-col xl:flex-row gap-3">
+                <div className="left-hero hero-gradient w-full xl:w-[78%] h-[500px] md:h-[700px] xl:h-full flex justify-center items-center overflow-hidden rounded-xl relative">
+                    <h1 className='heading-txt text-[7.5rem] md:text-[28vw] lg:text-[20vw] xl:text-[14vw] 2xl:text-[13.5vw] text-center text-white tracking-tight leading-none w-[4.1ch] xl:w-fit break-words font-semibold relative z-[1]'>KICKSTER</h1>
+                    <h1 className='upper-hero-txt text-[7.5rem] md:text-[28vw] lg:text-[20vw] xl:text-[14vw] 2xl:text-[13.5vw] text-center tracking-tight leading-none w-[4.1ch] xl:w-fit break-words'>KICKSTER</h1>
                     <div className="shoe-img">
                         <img src={shoe} className='shoe-img absolute top-[40%] left-[50%] -translate-x-[50%] -translate-y-[50%] h-[300px] md:h-[70vw] lg:h-[55vw] xl:h-[37vw] object-cover z-[2]' alt="" />
                     </div>
@@ -67,7 +67,7 @@ const Hero = () => {
                     </div>
                     <Link to="/shop" className='absolute bg-white px-5 2xl:px-7 py-1.5 2xl:py-2.5 rounded bottom-[3vmax] shadow-xl shadow-zinc-300 text-black txt-medium 2xl:text-[1.2rem]'>Shop Now ›</Link>
                 </div>
-                <div className="right-hero w-full xl:w-[27%] h-[150px] md:h-[250px] xl:h-full flex xl:flex-col gap-3 xl:gap-5">
+                <div className="right-hero w-full xl:w-[22%] h-[150px] md:h-[250px] xl:h-full flex xl:flex-col gap-3">
                     <div className="men-link w-1/2 xl:w-full h-full xl:h-1/2 relative rounded-md overflow-hidden">
                         <Link to="/shop/men" className="w-full xl:w-full flex justify-center items-center h-[150px] xl:h-full">
                             <img className=' w-full xl:h-full object-cover object-bottom' src={menShoe} alt="" />

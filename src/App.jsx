@@ -1,24 +1,23 @@
-import Router from './utils/Router'
-import Navbar from './components/navbar/Navbar'
-import { useEffect, useCallback } from 'react'
-import gsap from 'gsap'
-import Footer from './components/footer/Footer'
-import { useDispatch, useSelector } from 'react-redux'
-import { getProducts } from './store/features/productsSlice'
-import { ToastContainer } from 'react-toastify'
+import Router from './utils/Router';
+import Navbar from './components/navbar/Navbar';
+import { useEffect, useCallback } from 'react';
+import gsap from 'gsap';
+import Footer from './components/footer/Footer';
+import { useDispatch, useSelector } from 'react-redux';
+import { getProducts } from './store/features/productsSlice';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { doc, getDoc, onSnapshot, setDoc } from 'firebase/firestore'
-import { setUser } from './store/features/loggedInSlice'
-import { auth, db } from './utils/firebaseConfigures'
-import ScrollTop from './utils/ScrollTop'
-import { setCartItems } from './store/features/cartSlice'
-import { setWishlist } from './store/features/wishlistSlice'
+import { doc, getDoc, onSnapshot, setDoc } from 'firebase/firestore';
+import { setUser } from './store/features/loggedInSlice';
+import { auth, db } from './utils/firebaseConfigures';
+import { setCartItems } from './store/features/cartSlice';
+import { setWishlist } from './store/features/wishlistSlice';
+import SmoothScrolling from './utils/SmoothScrolling';
 
 const App = () => {
   const dispatch = useDispatch();
   const adminId = useSelector(state => state.loggedInUser.admin);
   const userId = useSelector(state => state.loggedInUser.default);
-  const screen = window.innerWidth;
 
   //Initializing the MOUSE FOLLOWER
   const mouseFollower = useCallback((e) => {
@@ -107,7 +106,7 @@ const App = () => {
                 isVerified: true
               });
             }
-            localStorage.setItem("user", JSON.stringify({ ...docSnap.data(),  isVerified: user.id === userId ? true : user.emailVerified ? true : false }));
+            localStorage.setItem("user", JSON.stringify({ ...docSnap.data(), isVerified: user.id === userId ? true : user.emailVerified ? true : false }));
             dispatch(setUser({ ...docSnap.data(), isVerified: user.id === userId ? true : user.emailVerified ? true : false }));
           }
         })
@@ -123,29 +122,32 @@ const App = () => {
   }, [dispatch, adminId])
 
   return (
-    <div className={`w-screen h-[100vh] relative ${screen < 1024 ? "" : "overflow-hidden"}`}>
-      <span className="mouseFollower hidden absolute lg:block opacity-0 w-[12px] h-[12px] rounded-full bg-[#3d3d3d] top-0 left-0 z-[100] pointer-events-none"></span>
-      <ScrollTop />
-      <div className={`w-full h-full pb-[5vh] ${screen < 1024 ? "" : "overflow-y-auto"}`}>
-        <Navbar />
-        <main className='lg:px-5'>
-          <Router />
-          <ToastContainer
-            position="top-right"
-            autoClose={3000}
-            hideProgressBar={true}
-            newestOnTop={false}
-            closeOnClick
-            rtl={false}
-            pauseOnFocusLoss
-            draggable
-            pauseOnHover
-            theme="light"
-          />
-        </main>
-        <Footer />
+    <>
+      <div className="overlay-cusor h-screen fixed z-[999] transparent pointer-events-none">
+        <span className="mouseFollower hidden absolute lg:block opacity-0 w-[12px] h-[12px] rounded-full bg-[#3d3d3d] top-0 left-0 z-[100] pointer-events-none"></span>
       </div>
-    </div>
+      {/* <SmoothScrolling> */}
+        <div className={`w-full pb-[5vh]`}>
+          <Navbar />
+          <main className='lg:px-5'>
+            <Router />
+            <ToastContainer
+              position="top-right"
+              autoClose={3000}
+              hideProgressBar={true}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+              theme="light"
+            />
+          </main>
+          <Footer />
+        </div>
+      {/* </SmoothScrolling> */}
+    </>
   )
 }
 

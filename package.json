@@ -12,8 +12,10 @@
   "dependencies": {
     "@gsap/react": "^2.1.1",
     "@reduxjs/toolkit": "^2.3.0",
+    "@studio-freight/react-lenis": "^0.0.47",
     "firebase": "^10.14.1",
     "gsap": "^3.12.5",
+    "lenis": "^1.1.18",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.53.2",

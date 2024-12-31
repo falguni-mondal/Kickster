@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, } from "swiper/modules";
 // Import Swiper styles
@@ -14,7 +14,7 @@ import { priceCorrection, priceStringToInt } from './priceCorrection';
 import Loader from '../loader/Loader';
 
 const ProductCards = ({ heading, cards }) => {
-    const [screenX, setScreenX] = React.useState(window.innerWidth);
+    const [screenX, setScreenX] = useState(window.innerWidth);
     window.onresize = () => {
         setScreenX(window.innerWidth);
     };
@@ -31,7 +31,7 @@ const ProductCards = ({ heading, cards }) => {
                     prevEl: '.prev-btn',
                 }}
                 autoplay={{
-                    delay: 8000,
+                    delay: 5000,
                     disableOnInteraction: false,
                 }}
                 speed={1000}
