@@ -15,6 +15,7 @@ import Verify from "../components/auth/Verify";
 import { useSelector } from "react-redux";
 import Cart from "../components/user/cart/Cart";
 import Wishlist from "../components/user/wishlist/Wishlist";
+import Search from "../components/mobileSearch/Search";
 
 const Router = () => {
   const user = useSelector(state => state.loggedInUser.user);
@@ -41,6 +42,7 @@ const Router = () => {
         <Route path="/admin/products/add" element={<AddUpdateProduct />} />
         <Route path="/admin/products/update/:id" element={<AddUpdateProduct />} />
       </Route>
+      <Route path="/search" element={<Search />} />
     </Routes>
   );
 };

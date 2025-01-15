@@ -93,7 +93,7 @@ const MobileNavMenu = ({ reveal, setReveal }) => {
       ref={menuRef}
       className={`hamburger-menu absolute w-[95vw] p-5 ${
         reveal ? "h-[27vh] top-[-27vh] opacity-100" : "h-0 top-[10vh] opacity-0"
-      } left-[50%] -translate-x-[50%] lg:hidden bg-[#fff] rounded-[10px_10px_0px_0px] border-zinc-100 border-x-2 border-t-2 grid grid-cols-3 gap-5 overflow-hidden transition-all duration-300`}
+      } left-[50%] -translate-x-[50%] lg:hidden bg-[#fffffffb] rounded-[10px_10px_0px_0px] border-zinc-100 border-x-2 border-t-2 grid grid-cols-3 gap-5 overflow-hidden transition-all duration-300`}
     >
       {
         navs.map(({ icon: IconBase, label, path }) => (

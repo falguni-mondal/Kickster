@@ -21,7 +21,7 @@ const Header = () => {
   }
 
   return (
-    <section className="bg-[#ffffffb6] backdrop-blur-md navbar-section w-full fixed bottom-0 lg:sticky lg:flex justify-center z-[99] lg:top-0 left-0 shadow-lg  shadow-black lg:shadow-none">
+    <section className="bg-[#fffffffb] lg:bg-[#ffffffb6] backdrop-blur-md navbar-section w-full fixed bottom-0 lg:sticky lg:flex justify-center z-[99] lg:top-0 left-0 shadow-lg  shadow-black lg:shadow-none">
       <div className="navigation-container h-[55px] relative w-full flex justify-between items-center px-5 lg:px-10 py-2">
         <LeftNav filterAdder={filterAdder} />
         <MobileLeftNav />
