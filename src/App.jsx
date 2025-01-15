@@ -13,6 +13,7 @@ import { auth, db } from './utils/firebaseConfigures';
 import { setCartItems } from './store/features/cartSlice';
 import { setWishlist } from './store/features/wishlistSlice';
 import SmoothScrolling from './utils/SmoothScrolling';
+import ScrollTop from './utils/ScrollTop';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -127,25 +128,26 @@ const App = () => {
         <span className="mouseFollower hidden absolute lg:block opacity-0 w-[12px] h-[12px] rounded-full bg-[#3d3d3d] top-0 left-0 z-[100] pointer-events-none"></span>
       </div>
       {/* <SmoothScrolling> */}
-        <div className={`w-full pb-[5vh]`}>
-          <Navbar />
-          <main className='lg:px-5'>
-            <Router />
-            <ToastContainer
-              position="top-right"
-              autoClose={3000}
-              hideProgressBar={true}
-              newestOnTop={false}
-              closeOnClick
-              rtl={false}
-              pauseOnFocusLoss
-              draggable
-              pauseOnHover
-              theme="light"
-            />
-          </main>
-          <Footer />
-        </div>
+      <div className={`w-full pb-[5vh]`}>
+        <Navbar />
+        <main className='lg:px-5'>
+          <Router />
+          <ToastContainer
+            position="top-right"
+            autoClose={3000}
+            hideProgressBar={true}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="light"
+          />
+        </main>
+        <Footer />
+        <ScrollTop />
+      </div>
       {/* </SmoothScrolling> */}
     </>
   )
