@@ -2,7 +2,7 @@ import React from 'react'
 
 const AdminContentOrders = () => {
   return (
-    <div>AdminContentOrders</div>
+    <div>Please go to <span className='txt-medium'>Products</span> nav <br /> as Orders section is not designed yet.</div>
   )
 }
 
