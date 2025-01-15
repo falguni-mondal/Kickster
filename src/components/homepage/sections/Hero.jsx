@@ -30,26 +30,7 @@ const Hero = () => {
     })
 
     return (
-        // <header className='hero-section relative h-fit xl:h-screen max-h-[768px] w-full xl:px-5 xl:py-[5vh] flex xl:flex-col flex-col-reverse gap-10 items-center justify-center xl:justify-between'>
         <header className='hero-section relative h-fit xl:h-screen w-full px-3 py-5 xl:py-[5vh]'>
-            {/* <div className="w-full relative z-[10] flex xl:flex-row flex-row-reverse justify-between bg-[#fff]">
-                <NavLink className="font-normal" to="/shoes/sale"><span className="inline-block w-[5px] h-[5px] rounded-full bg-[#34ff22] shadow-[0px_0px_10px_1px_#20f70c] mb-1"></span> On sale</NavLink>
-                <p className='w-[25ch] font-normal'>Discover branded footwear to kickstart your wardrobe, one step at a time —</p>
-            </div>
-            <div className="heading-container w-full h-fit xl:overflow-hidden pb-[1.5vh]">
-                <div className="main-heading flex-shrink-0 w-full">
-                    <h1 className='w-full h-fit bg-[#fff] mix-blend-lighten flex flex-wrap justify-center text-[6.8rem] xl:text-[22rem] 2xl:text-[25rem] leading-none tracking-[-5px] xl:tracking-[-10px]'>
-                        {
-                            screen = 1024 ?
-                            "Kickster".split("").map((item, index) => (
-                                <span key={item} className={`${index === 0 && "uppercase"} main-heading-txt`}>{item}</span>
-                            )) :
-                            <span className='block'>KICK<br />STER</span>
-                        }
-                    </h1>
-                </div>
-                <img className='shoeImg absolute bottom-[9vh] xl:bottom-[3vh] left-[50%] -translate-x-[50%] h-[30vh] xl:h-[95vh] max-h-[750px] z-10' src={shoe} alt="Nike Shoe Img" />
-            </div> */}
             <div className="w-full h-fit xl:h-[calc(100vh-90px)] flex flex-col xl:flex-row gap-3">
                 <div className="left-hero hero-gradient w-full xl:w-[78%] h-[500px] md:h-[700px] xl:h-full flex justify-center items-center overflow-hidden rounded-xl relative">
                     <h1 className='heading-txt text-[7.5rem] md:text-[28vw] lg:text-[20vw] xl:text-[14vw] 2xl:text-[13.5vw] text-center text-white tracking-tight leading-none w-[4.1ch] xl:w-fit break-words font-semibold relative z-[1]'>KICKSTER</h1>

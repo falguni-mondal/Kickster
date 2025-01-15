@@ -253,6 +253,12 @@ const Filters = ({filter, reveal}) => {
     else if (filter === "running" || filter === "lifestyle" || filter === "basketball" || filter === "football" || filter === "training & gym"){
       setFilterData({...navFilters, sport: [filter]});
     }
+    else if (filter === "sports"){
+      setFilterData({...navFilters, sport: ["running", "lifestyle", "basketball", "football", "training & gym"]});
+    }
+    else if (filter === "brands"){
+      setFilterData({...navFilters, brand: ["nike", "puma", "adidas"]});
+    }
     else{
       setFilterData({...navFilters, brand: [filter]});
     }
