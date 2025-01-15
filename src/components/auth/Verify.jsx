@@ -29,7 +29,7 @@ const Verify = () => {
         <div className='h-[80vh] w-full flex justify-center items-center px-5'>
             <p className='w-[45ch]'>
                 <h1 className='text-[2.3rem] leading-none mb-3'>Please verify your <span className='underline'>email</span> to continue</h1>
-                <span className='text-zinc-800'>Verify your email address to continue. Check your inbox for the verification link. If you haven't received it, please check your spam folder.</span>
+                <span className='text-zinc-800'>Verify your email address to continue. <span className='underline txt-medium'>Check your inbox</span> for the verification link. If you haven't received it, please check your spam folder.</span>
                 <br />
                 <br />
                 <span className='text-zinc-950'>
