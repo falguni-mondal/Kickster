@@ -141,6 +141,7 @@ const Filters = ({filter, reveal}) => {
     setIsFiltered(true);
   };
 
+  //! Filtered Product Adding...............................................
   const filteredProductsAdder = () => {
     if (filterData && products) {
       dispatch(
@@ -153,10 +154,16 @@ const Filters = ({filter, reveal}) => {
               }
 
               if (section === "sport") {
-                // if (product.sneaker && !product.sport) return true;
                 if (filterData.sport.length === 0) return true;
                 return filterData.sport.some((option) =>
                   product.sport === option
+                );
+              }
+
+              if (section === "brand") {
+                if (filterData.brand.length === 0) return true;
+                return filterData.brand.some((option) =>
+                  product.brand.toLowerCase() === option
                 );
               }
 
@@ -198,11 +205,6 @@ const Filters = ({filter, reveal}) => {
                 }
                 );
               }
-
-              if (filterData[section].length === 0) return true;
-              return filterData[section].some((option) =>
-                product[section] === option
-              );
             })
           )
         )
@@ -214,6 +216,7 @@ const Filters = ({filter, reveal}) => {
     filteredProductsAdder();
   }, [filterData, products])
 
+  //! Saving and Retriving FilterData in/from LocalStorage........................
   useMemo(() => {
     if (filterData) {
       if (filterData.gender.length === 0 && filterData.size.length === 0 && filterData.price.length === 0 && filterData.sport.length === 0 && filterData.brand.length === 0 && filterData.sneaker === false && isFiltered === false) {
@@ -226,10 +229,11 @@ const Filters = ({filter, reveal}) => {
   }, [filterData]);
 
   useEffect(() => {
-    if (localStorage.getItem("filters")) {
-      setFilterData(JSON.parse(localStorage.getItem("filters")));
+    const storedFilters = localStorage.getItem("filters");
+    if (storedFilters) {
+      setFilterData(JSON.parse(storedFilters));
     }
-  }, []);
+  }, [filterData]);
 
   //! FILTER THROUGH NAV
   useEffect(() => {
@@ -242,7 +246,7 @@ const Filters = ({filter, reveal}) => {
       sneaker: false
     }
     if(filter === "none"){
-      ""
+      setFilterData({...navFilters});
     }
     else if(filter === "sneaker"){
       setFilterData({...navFilters, sneaker: true});

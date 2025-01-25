@@ -113,7 +113,6 @@ const App = () => {
         })
       } else {
         localStorage.getItem("user") && localStorage.removeItem("user");
-        localStorage.getItem("filters") && localStorage.removeItem("filters");
         localStorage.getItem("sorting") && localStorage.setItem("sorting", "all");
         dispatch(setUser(null));
       }

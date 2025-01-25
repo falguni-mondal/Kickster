@@ -4,8 +4,7 @@ import React, { useRef, useEffect } from "react";
 import { IoIosMale } from "react-icons/io";
 import { IoIosFemale } from "react-icons/io";
 import { PiSneakerLight } from "react-icons/pi";
-import { TbLetterB } from "react-icons/tb";
-import { CiUser } from "react-icons/ci";
+import { CiUser, CiHeart } from "react-icons/ci";
 import { PiBagLight } from "react-icons/pi";
 import { PiPackage } from "react-icons/pi";
 import { PiUsers } from "react-icons/pi";
@@ -34,11 +33,6 @@ const MobileNavMenu = ({ reveal, setReveal }) => {
       path: "/shop/women",
     },
     {
-      icon: TbLetterB,
-      label: "Brands",
-      path: "/brands",
-    },
-    {
       icon: PiSneakerLight,
       label: "SNKRS",
       path: "/shop/sneaker",
@@ -52,6 +46,11 @@ const MobileNavMenu = ({ reveal, setReveal }) => {
       icon: PiBagLight,
       label: "Bag",
       path: "/user/bag",
+    },
+    {
+      icon: CiHeart,
+      label: "Wishlist",
+      path: "/user/wishlist",
     }
   ];
   const adminNavs = [
