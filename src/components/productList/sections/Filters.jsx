@@ -233,7 +233,7 @@ const Filters = ({filter, reveal}) => {
     if (storedFilters) {
       setFilterData(JSON.parse(storedFilters));
     }
-  }, [filterData]);
+  }, []);
 
   //! FILTER THROUGH NAV
   useEffect(() => {
@@ -266,7 +266,7 @@ const Filters = ({filter, reveal}) => {
     else{
       setFilterData({...navFilters, brand: [filter]});
     }
-  }, [])
+  }, [filter])
 
   return (
     filterData &&
